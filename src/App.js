@@ -52,11 +52,17 @@ const App = () => {
         return (
           eachWord.concat("way")
         )
-      else if(eachWord[0] === "q"||
+      else if(eachWord[0] === "q" &&
           eachWord[1] === "u")
           return (eachWord.slice(2).concat("quay")
         )
-    
+    else if(eachWord.search(/[aeiou]/) === -1)
+    { let consonantChange = eachWord.indexOf("y") 
+          let wordSlice = (eachWord.slice(0, consonantChange))
+          return eachWord.charAt(consonantChange).concat(wordSlice).concat("ay")
+          // console.log(consonantChange)
+
+    }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
