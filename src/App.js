@@ -33,9 +33,13 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
-//input: array
+//input: string
 //output: string with way at the end
 //process: create a conditional statement, if the vowels is at index zero add way to the end of the word.
+// story 2:
+// input: string
+// output: string, with "qu" in the first syllable translated by moving all the consonant and the "u" to the end and add "ay".
+// process: create a conditional statement where if the input begins with qu, move all the consonants and "u" to the end, and add "ay"
       if (eachWord[0] === "a"||
         eachWord[0] === "e" ||
         eachWord[0] === "i" ||
@@ -44,7 +48,10 @@ const App = () => {
         return (
           eachWord.concat("way")
         )
-      
+      else if(eachWord[0] === "q"||
+          eachWord[1] === "u")
+          return (eachWord.slice(2).concat("quay")
+        )
     
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
