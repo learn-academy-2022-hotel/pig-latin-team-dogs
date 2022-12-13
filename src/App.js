@@ -40,6 +40,10 @@ const App = () => {
 // input: string
 // output: string, with "qu" in the first syllable translated by moving all the consonant and the "u" to the end and add "ay".
 // process: create a conditional statement where if the input begins with qu, move all the consonants and "u" to the end, and add "ay"
+// story 3:
+// input:string
+// output: string that has no vowels other than "y" translated by moving all the consonant to the end and add "ay"
+// process: use else if statement to check if there are no vowels "a,e,i,o,u" in the string. if true return shift the consonants to the end of the string and add "ay"
       if (eachWord[0] === "a"||
         eachWord[0] === "e" ||
         eachWord[0] === "i" ||
